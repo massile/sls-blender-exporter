@@ -26,15 +26,17 @@ Hopefully, this format will take into account animation techniques like
     name: <name of the blender armature>
     joints:
       - index: 1
+        parent: <parent of the bone> (-1 if none)
         name: <name of the first blender bone>
         orientation: <direction of the bone (quaternion)>
-        parent: <parent of the bone> (-1 if none)
         position: <position of the root joint>
 
       - index: 2
-        name: <name of the second bone>
-        orientation: ...
-        position: ...
+        parent: <...>
+        name: <...>
+        orientation: <...>
+        position: <...>
+      ...
 
   mesh:
     name: <name of the blender mesh>
