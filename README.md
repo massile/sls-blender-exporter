@@ -1,10 +1,10 @@
-# Sls blender exporter
+![](http://image.noelshack.com/fichiers/2016/43/1477575001-logomakr-1cebdi.png)
 
-An exporter to the `.sls` file format for blender
+A [Blender3D](https://www.blender.org/) addon that exports the blender scene to the `.sls` file format.
 
 ## Description
 
-The `.sls` file format is a custom 3d file format to export skinned mesh from [Blender](https://www.blender.org/).
+The `.sls` file format is my custom 3d file format to read, write, export, import [skinned meshes](https://en.wikipedia.org/wiki/Skeletal_animation) from [Blender3D](https://www.blender.org/).
 
 This format will first use the [YAML](http://yaml.org/) data serialization for clarity.
 
@@ -12,16 +12,16 @@ It mainly focuses on skeletal animation, any other data will be discarded for si
 
 Hopefully, this format will take into account animation techniques like
 
-  - IK solvers
-  - Bone constraints
+  - [IK solvers](https://www.blender.org/manual/rigging/armatures/posing/bone_constraints/inverse_kinematics/introduction.html)
+  - [Bone constraints](https://www.blender.org/manual/rigging/armatures/posing/bone_constraints/introduction.html)
 
-  ## Draft of the file format
+## Draft of the file format
 
-  Here is a preview of the targeted result. (for now)
+Here is a preview of the targeted result. (for now)
 
-  #### Vector/Quaternion representation
+#### Vector/Quaternion representation
 
-  ```yaml
+```yaml
   skeleton:
     name: <name of the blender armature>
     joints:
@@ -60,8 +60,7 @@ Hopefully, this format will take into account animation techniques like
       - joint: <index of the joint associated to this weight>
         bias: <bias of the weight> (from 0 to 1)
         position: <position of the weight>
-  ```
-
+```
 
 ## Setup
 
