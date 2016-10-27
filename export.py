@@ -7,5 +7,9 @@ def export(report, filename):
 	armature = next(obj for obj in bpy.context.selected_objects if obj.type == 'ARMATURE')
 	skeleton = convert.fromArmatureToSkeleton(armature)
 
+	mesh = next(obj for obj in bpy.context.selected_objects if obj.type == 'MESH')
+	slsMesh = convert.fromMeshToSlsMesh(mesh)
+
 	file.write(skeleton.toSls())
+	file.write(slsMesh.toSls())
 	file.close()

@@ -1,4 +1,4 @@
-from .dataTypes import Skeleton, Joint
+from .dataTypes import Skeleton, Joint, SlsMesh
 
 def fromBonesToJoints(bone, parentJoint = None, joints = []):
 	# To clear the joints parameter when the script is called more than once
@@ -18,3 +18,6 @@ def fromArmatureToSkeleton(armature):
 	joints = fromBonesToJoints(rootBone)
 
 	return Skeleton(armature.name, joints)
+
+def fromMeshToSlsMesh(mesh):
+	return SlsMesh(mesh.name, [], [], [])
