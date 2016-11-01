@@ -55,7 +55,7 @@ class Vertex:
         self.weights = weights
 
     def toSls(self):
-        weightsStr = listToSls(self.weights)
+        weightsStr = self.weights.toSls()
         return \
 """
   - index: %s
