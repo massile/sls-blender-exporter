@@ -1,6 +1,7 @@
 import bpy
 from . import export
 
+
 class Exporter(bpy.types.Operator):
     bl_label = 'Export to .sls'
     bl_idname = 'export.sls'

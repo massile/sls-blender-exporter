@@ -13,9 +13,11 @@ bl_info = {
 import bpy
 from . import operator, ui
 
+
 def register():
     bpy.utils.register_class(operator.Exporter)
     bpy.types.INFO_MT_file_export.prepend(ui.menu)
+
 
 def unregister():
     bpy.utils.unregister_class(operator.Exporter)
